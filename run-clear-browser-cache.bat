@@ -10,18 +10,16 @@ echo ===========================================
 set /p choice="Enter 1, 2, or 3: "
 
 if "%choice%"=="1" (
-    set encodedUrl=aHR0cHM6Ly9yYXcuaW5ncmF3LmNvbS9BaG1lZHNhbWlyLXRpbGRldGVjaC9jbGVhci1jYWNoZS1zY3JpcHQvbWFpbi9jbGVhci1jaHJvbWUtY2FjaGUuYmF0
+    set SCRIPT_URL=https://raw.githubusercontent.com/Ahmedsamir-tildetech/clear-cache-script/main/clear-chrome-cache.bat
 ) else if "%choice%"=="2" (
-    set encodedUrl=aHR0cHM6Ly9yYXcuaW5ncmF3LmNvbS9BaG1lZHNhbWlyLXRpbGRldGVjaC9jbGVhci1jYWNoZS1zY3JpcHQvbWFpbi9jbGVhci1maXJlZm94LWNhY2hlLmJhdA==
+    set SCRIPT_URL=https://raw.githubusercontent.com/Ahmedsamir-tildetech/clear-cache-script/main/clear-firefox-cache.bat
 ) else if "%choice%"=="3" (
-    set encodedUrl=aHR0cHM6Ly9yYXcuaW5ncmF3LmNvbS9BaG1lZHNhbWlyLXRpbGRldGVjaC9jbGVhci1jYWNoZS1zY3JpcHQvbWFpbi9jbGVhci1lZGdlLWNhY2hlLmJhdA==
+    set SCRIPT_URL=https://raw.githubusercontent.com/Ahmedsamir-tildetech/clear-cache-script/main/clear-edge-cache.bat
 ) else (
     echo Invalid choice. Exiting...
     pause
     exit /b
 )
-
-for /f "delims=" %%i in ('powershell "[System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String('%encodedUrl%'))"') do set SCRIPT_URL=%%i
 
 set TEMP_SCRIPT=%temp%\clear-browser-latest.bat
 
